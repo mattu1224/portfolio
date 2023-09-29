@@ -1,0 +1,441 @@
+  /* PC、スマホ共通スタイル */
+  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+
+  /* 画面幅が768px以上のとき */
+  @media screen and (min-width: 768px) {
+    /* PC用のスタイルを指定する */
+  
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* ナビゲーション */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#FF7A00 ;
+    padding: 0 10% ;
+    align-items: center;
+  }
+  
+  .home {
+    font-size: 30px;
+    font-weight: 700;
+    width: 100%;
+  }
+  
+  nav h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+
+  .menu ul {
+    display: flex;
+  }
+
+  .menu a {
+    margin-left: 35px;
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  .menu a:hover {
+    opacity: 0.4;
+  }
+
+
+  .openbtn1 {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー非表示 */
+.header-hamburger {
+  display: none;
+}
+
+
+  
+  /* .menu {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .menu a {
+    margin-left: 34px;
+  } */
+/* Works-1用のスタイル */
+
+.works1-text {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 137px;
+}
+
+.works1-section h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.works1-text h1::after {
+  display: block;
+  content: "";
+  border: 1px solid #000;
+  width: 100%;
+}
+
+
+.works1-section h2 {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 31px;
+  margin-bottom: 15px;
+}
+
+.works1-section p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#works1-img img {
+  width: 60%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+#works1-items {
+  margin: 135px auto 0 auto;
+}
+
+#works1-items a:hover {
+  opacity: 0.4;
+}
+
+.works1-url {
+  display: flex;
+  margin-left: 20%;
+}
+
+.box {
+  width: 17px;
+  height: 35px;
+  background-color: #000000;
+}
+
+.works1-url h3 {
+  margin-left: 12px;
+}
+
+#works1-items a {
+  display: block;
+  margin-top: 6px;
+  margin-left: 20%;
+  margin-bottom: 50px;
+}
+
+#works1-items p {
+  margin-top: 6px;
+  margin-left: 20%;
+  margin-bottom: 50px;
+}
+
+#works-list {
+  border-bottom: #000000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 153px;
+  text-decoration: underline;
+}
+
+#works-list a:hover {
+  opacity: 0.4;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  background-color: #FF7A00;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+}
+
+/*====================
+  スマートフォン用のスタイル
+  =====================*/
+  @media screen and (max-width: 767px) {
+  
+
+
+    body {
+      width: 100%;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 0 auto;
+    }
+
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #FF7A00;
+    }
+  
+    nav h1 {
+      position: relative;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 20px 0 20px 30px;
+      z-index: 1001;
+    }
+  
+        /* ↓ここからハンバーガー */
+        .openbtn1 {
+          position: relative;
+          /*ボタン内側の基点となるためrelativeを指定*/
+          cursor: pointer;
+          width: 50px;
+          height: 50px;
+          top: 11px;
+          right: 15px;
+          z-index: 1000;
+        }
+
+              /*ボタン内側*/
+  .openbtn1 span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #000;
+    width: 45%;
+  }
+
+  .openbtn1 span:nth-of-type(1) {
+    top: 15px;
+  }
+
+  .openbtn1 span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  .openbtn1 span:nth-of-type(3) {
+    top: 31px;
+  }
+
+    .home h1 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  
+      /*activeクラスが付与されると線が回転して×に*/
+
+  .openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn1.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+  }
+
+  .openbtn1.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+  /* ↑ここまでハンバーガー */
+
+      /* ↓ここからクリックしたらナビが右から左に出現 */
+      #g-nav {
+        /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+        position: fixed;
+        z-index: 999;
+        /*ナビのスタート位置と形状*/
+        top: 0;
+        right: -120%;
+        width: 100%;
+        height: 100vh;
+        /*ナビの高さ*/
+        background: #FF7A00;
+        /*動き*/
+        transition: all 0.6s;
+      }
+  
+      #g-nav.panelactive {
+        right: 0;
+        background: #FF7A00;
+      }
+    
+        /*ナビゲーションの縦スクロール*/
+  /* #g-nav.panelactive #g-nav-list {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  } */
+
+      /*ナビゲーション*/
+      #g-nav ul {
+        /*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top: 15%;
+        left: 35%;
+      }
+
+          /*リストのレイアウト設定*/
+
+    #g-nav li {
+      list-style: none;
+    }
+
+    #g-nav li a {
+      color: #000;
+      padding: 10px;
+      display: block;
+      font-size: 20px;
+      font-weight: 100;
+    }
+
+    #g-nav li a::after {
+      display: block;
+      content: "";
+      border: 1px solid #cc5b06;
+      width: 750%;
+    }
+
+    /* ↑ここまで右から左へ出てくるナビゲーション */
+  
+    main {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .works1-section {
+      margin-top: 100px;
+    }
+
+    .works1-text {
+      text-align: center;
+    }
+
+    .works1-text h1 {
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .works1-text h1::after {
+      display: block;
+      content: "";
+      border: 1px solid #000;
+      width: 100%;
+    }
+
+    .works1-text h2 {
+      margin-top: 15px;
+      font-size: 15px;
+      font-weight: 500;
+
+    }
+
+    .works1-text p {
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+  
+    #works1-img img {
+      width: 80%;
+      display: block;
+      margin: 47px auto 50px auto;
+      object-fit: cover;
+    }
+
+    .box {
+      width: 10px;
+      height: 25px;
+      background-color: #000000;
+      margin-right: 10px;
+    }
+
+    .works1-url {
+      display: flex;
+      margin-top: 30px;
+    }
+
+    #works1-items a,p{
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    #works-list {
+      font-size: 18px;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    #works-list::after {
+      display: block;
+      content: "";
+      border: 1px solid #000;
+      width: 110px;
+      margin: 0 auto 60px auto;
+    }
+
+    footer p {
+      font-size: 12px;
+      font-weight: 300;
+      text-align: center;
+      background-color: #FF7A00;
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    
+
+  /*  */
+  /*  */
+
+  /*========= ナビゲーションのためのCSS ===============*/
+
+
+  }  
